@@ -1,0 +1,73 @@
+*{box-sizing:border-box}
+body{
+   background:#e0f0f0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 98vh;
+  
+} 
+.container{
+  height: 300px;
+  width: 350px;
+  border: 1px solid re;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+ 
+}
+h2{
+  padding: 10px 5px;
+  border-left: 5px solid deepskyblue;
+}
+.input-box{
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-box input{
+  position: absolute;
+  background: transparent;
+  width:100%;
+  box-sizing:border-box;
+  height: 30px;
+  outline: none;
+  border: 1px solid skyblue;
+  font-size: 16px;
+  z-index: 1;
+}
+.input-box span{
+  padding: 6px 10px;
+  display: inline-block;
+  transition: transform .5s;
+  box-sizing: border-box;
+}
+.input-box input:focus~span,.input-box input:valid ~ span{
+  transform: translate(-10px,-20px);
+  font-size: 10px;
+  font-weight: bold;
+}
+#eye{
+  position: absolute;
+  padding: 6px 10px;
+  right: 0;
+  display: none;
+  cursor: pointer;
+}
+#eye.active{color: deepskyblue}
+.input-box input:focus~#eye, .input-box input:valid~#eye{
+  display: block;
+  z-index: 1;
+}
+
+input[type=submit]{
+  padding: 10px 50px;
+  outline: none;
+  border: none;
+  background: deepskyblue;
+  color: white;
+  font-size: 16px;
+}
+input[type=submit]:hover{
+  background: #11b2cf;
+}
